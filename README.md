@@ -5,6 +5,8 @@ Set of resources and configuration to apply Defender capabilities.
 Create the baseline infrastructure:
 
 ```sh
+cp config/sample.tfvars .auto.tfvars
+
 terraform init
 terraform apply -auto-approve
 ```
