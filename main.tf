@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.81.0"
+      version = "3.82.0"
     }
   }
 }
@@ -31,15 +31,25 @@ resource "azurerm_log_analytics_workspace" "default" {
   retention_in_days   = 30
 }
 
-module "vm" {
-  count               = var.create_vm == true ? 1 : 0
-  source              = "./modules/vm"
+module "vm_linux" {
+  count               = var.create_vm_linux == true ? 1 : 0
+  source              = "./modules/vm/linux"
   workload            = local.workload
   resource_group_name = azurerm_resource_group.default.name
   location            = azurerm_resource_group.default.location
   subnet_id           = module.vnet.subnet_id
-  size                = var.vm_size
-  image_sku           = var.vm_image_sku
+  size                = var.vm_linux_size
+  image_sku           = var.vm_linux_image_sku
+}
+
+module "vm_windows" {
+  count               = var.create_vm_windows == true ? 1 : 0
+  source              = "./modules/vm/windows"
+  workload            = local.workload
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
+  subnet_id           = module.vnet.subnet_id
+  size                = var.vm_windows_size
 }
 
 module "mssql" {

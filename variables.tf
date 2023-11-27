@@ -4,7 +4,11 @@ variable "location" {
 }
 
 # Create toggles
-variable "create_vm" {
+variable "create_vm_linux" {
+  type = bool
+}
+
+variable "create_vm_windows" {
   type = bool
 }
 
@@ -12,12 +16,17 @@ variable "create_mssql" {
   type = bool
 }
 
-# Virutal Machine
-variable "vm_size" {
+# Virutal Machine - Linux
+variable "vm_linux_size" {
   type = string
 }
 
-variable "vm_image_sku" {
+variable "vm_linux_image_sku" {
+  type = string
+}
+
+# Virtual Machine - Windows
+variable "vm_windows_size" {
   type = string
 }
 

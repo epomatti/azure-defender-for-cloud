@@ -35,8 +35,6 @@ resource "azurerm_linux_virtual_machine" "default" {
   admin_password        = "P@ssw0rd.123"
   network_interface_ids = [azurerm_network_interface.default.id]
 
-  custom_data = filebase64("${path.module}/cloud-init.sh")
-
   identity {
     type = "SystemAssigned"
   }
@@ -62,7 +60,7 @@ resource "azurerm_linux_virtual_machine" "default" {
 
 # Not required for Defender, but installed for completeness
 resource "azurerm_virtual_machine_extension" "azure_monitor_agent" {
-  name                       = "monitor-agent"
+  name                       = "AzureMonitorLinuxAgent"
   virtual_machine_id         = azurerm_linux_virtual_machine.default.id
   publisher                  = "Microsoft.Azure.Monitor"
   type                       = "AzureMonitorLinuxAgent"

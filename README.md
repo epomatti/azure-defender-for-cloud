@@ -1,9 +1,17 @@
-# azure-defender-for-cloud
+# Azure Defender for Cloud
+
+Set of resources and configuration to apply Defender capabilities.
+
+Create the baseline infrastructure:
 
 ```sh
 terraform init
 terraform apply -auto-approve
 ```
+
+## Just-in-Time (JIT)
+
+JIT is implemented in my dedicated repository: https://github.com/epomatti/az-vm-jit
 
 ## Server protection
 
