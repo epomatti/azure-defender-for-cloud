@@ -52,6 +52,13 @@ module "vm_windows" {
   size                = var.vm_windows_size
 }
 
+module "keyvault" {
+  source   = "./modules/keyvault"
+  workload = local.workload
+  group    = azurerm_resource_group.default.name
+  location = azurerm_resource_group.default.location
+}
+
 module "mssql" {
   count    = var.create_mssql == true ? 1 : 0
   source   = "./modules/mssql"

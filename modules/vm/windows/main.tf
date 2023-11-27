@@ -23,7 +23,7 @@ resource "azurerm_network_interface" "windows" {
 }
 
 resource "azurerm_windows_virtual_machine" "windows" {
-  name                  = "vm-${var.workload}-windows"
+  name                  = "vm-${var.workload}-win"
   resource_group_name   = var.resource_group_name
   location              = var.location
   size                  = var.size
