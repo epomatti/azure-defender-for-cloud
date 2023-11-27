@@ -17,6 +17,10 @@ variable "vm_size" {
   type = string
 }
 
+variable "vm_image_sku" {
+  type = string
+}
+
 # Azure SQL Server
 variable "public_ip_address_to_allow" {
   type = string

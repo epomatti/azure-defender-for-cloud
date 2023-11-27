@@ -55,7 +55,7 @@ resource "azurerm_linux_virtual_machine" "default" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts-arm64"
+    sku       = var.image_sku
     version   = "latest"
   }
 }

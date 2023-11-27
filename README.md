@@ -7,7 +7,7 @@ terraform apply -auto-approve
 
 ## Server protection
 
-Defender will use Microsoft Defender for Endpoint for EDR.
+Defender will use Microsoft Defender for Endpoint for EDR, as well as [agentless][2] scanning based on the OS disk.
 
 The AMA is [not required][1] for Defender but it is installed anyways in this VM.
 
@@ -55,3 +55,4 @@ https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerabili
 
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
+[2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection

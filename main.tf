@@ -39,6 +39,7 @@ module "vm" {
   location            = azurerm_resource_group.default.location
   subnet_id           = module.vnet.subnet_id
   size                = var.vm_size
+  image_sku           = var.vm_image_sku
 }
 
 module "mssql" {

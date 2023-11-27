@@ -5,7 +5,6 @@ export NEEDRESTART_MODE=a
 
 # Update
 apt update
-apt upgrade -y
 
-
-reboot
+# Commenting to play around with Defender
+#apt upgrade -y
