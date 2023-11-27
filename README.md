@@ -11,6 +11,8 @@ terraform apply -auto-approve
 
 Make sure Defender is enabled.
 
+> TODO: Document Log Analytics stuff
+
 ## Environment Settings
 
 Add the desired subscriptions to the Defender scope.
