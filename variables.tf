@@ -3,6 +3,15 @@ variable "location" {
   default = "eastus2"
 }
 
+# Create toggles
+variable "create_vm" {
+  type = bool
+}
+
+variable "create_mssql" {
+  type = bool
+}
+
 # Virutal Machine
 variable "vm_size" {
   type = string

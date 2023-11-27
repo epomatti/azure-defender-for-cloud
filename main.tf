@@ -8,7 +8,7 @@ terraform {
 }
 
 locals {
-  workload = "bigbank79"
+  workload = "bigbank"
 }
 
 resource "azurerm_resource_group" "default" {
@@ -16,32 +16,41 @@ resource "azurerm_resource_group" "default" {
   location = var.location
 }
 
-# module "vnet" {
-#   source              = "./modules/vnet"
-#   workload            = local.workload
-#   resource_group_name = azurerm_resource_group.default.name
-#   location            = azurerm_resource_group.default.location
-# }
-
-# module "vm" {
-#   source              = "./modules/vm"
-#   workload            = local.workload
-#   resource_group_name = azurerm_resource_group.default.name
-#   location            = azurerm_resource_group.default.location
-#   subnet_id           = module.vnet.subnet_id
-#   size                = var.vm_size
-# }
-
-module "mssql" {
-  source   = "./modules/mssql"
-  workload = local.workload
-  group    = azurerm_resource_group.default.name
-  location = azurerm_resource_group.default.location
-
-  public_ip_address_to_allow    = var.public_ip_address_to_allow
-  sku                           = var.mssql_sku
-  max_size_gb                   = var.mssql_max_size_gb
-  public_network_access_enabled = var.mssql_public_network_access_enabled
-  admin_admin                   = var.mssql_admin_login
-  admin_login_password          = var.mssql_admin_login_password
+module "vnet" {
+  source              = "./modules/vnet"
+  workload            = local.workload
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
 }
+
+resource "azurerm_log_analytics_workspace" "default" {
+  name                = "log-${local.workload}"
+  location            = azurerm_resource_group.default.location
+  resource_group_name = azurerm_resource_group.default.name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
+}
+
+module "vm" {
+  count               = var.create_vm ? 1 : 0
+  source              = "./modules/vm"
+  workload            = local.workload
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
+  subnet_id           = module.vnet.subnet_id
+  size                = var.vm_size
+}
+
+# module "mssql" {
+#   source   = "./modules/mssql"
+#   workload = local.workload
+#   group    = azurerm_resource_group.default.name
+#   location = azurerm_resource_group.default.location
+
+#   public_ip_address_to_allow    = var.public_ip_address_to_allow
+#   sku                           = var.mssql_sku
+#   max_size_gb                   = var.mssql_max_size_gb
+#   public_network_access_enabled = var.mssql_public_network_access_enabled
+#   admin_admin                   = var.mssql_admin_login
+#   admin_login_password          = var.mssql_admin_login_password
+# }
