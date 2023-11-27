@@ -1,12 +1,12 @@
 resource "azurerm_public_ip" "default" {
-  name                = "pip-${var.workload}"
+  name                = "pip-${var.workload}-windows"
   resource_group_name = var.resource_group_name
   location            = var.location
   allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "windows" {
-  name                = "nic-windows"
+  name                = "nic-${var.workload}-windows"
   resource_group_name = var.resource_group_name
   location            = var.location
 
@@ -23,7 +23,7 @@ resource "azurerm_network_interface" "windows" {
 }
 
 resource "azurerm_windows_virtual_machine" "windows" {
-  name                  = "vm-windows"
+  name                  = "vm-${var.workload}-windows"
   resource_group_name   = var.resource_group_name
   location              = var.location
   size                  = var.size
