@@ -32,7 +32,7 @@ resource "azurerm_log_analytics_workspace" "default" {
 }
 
 module "vm" {
-  count               = var.create_vm ? 1 : 0
+  count               = var.create_vm == true ? 1 : 0
   source              = "./modules/vm"
   workload            = local.workload
   resource_group_name = azurerm_resource_group.default.name

@@ -5,6 +5,12 @@ terraform init
 terraform apply -auto-approve
 ```
 
+## Server protection
+
+Defender will use Microsoft Defender for Endpoint for EDR.
+
+The AMA is [not required][1] for Defender but it is installed anyways in this VM.
+
 ## Interactive guides
 
 - Attack paths
@@ -37,4 +43,15 @@ From the docs: https://learn.microsoft.com/en-us/training/modules/configure-inte
 - Log Analytics agent
 - Azure Policy Add-on for Kubernetes
 
+https://microsoftlearning.github.io/Secure-Azure-services-and-workloads-with-Microsoft-Defender-for-Cloud-regulatory-compliance-controls/Instructions/Labs/LAB_04_Configure%20and%20integrate%20a%20Log%20Analytics%20agent%20and%20workspace%20in%20Defender%20for%20Cloud.html
+
+
+
+
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable
+
+
+
+
+
+[1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent

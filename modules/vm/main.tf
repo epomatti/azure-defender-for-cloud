@@ -60,6 +60,7 @@ resource "azurerm_linux_virtual_machine" "default" {
   }
 }
 
+# Not required for Defender, but installed for completeness
 resource "azurerm_virtual_machine_extension" "azure_monitor_agent" {
   name                       = "monitor-agent"
   virtual_machine_id         = azurerm_linux_virtual_machine.default.id
