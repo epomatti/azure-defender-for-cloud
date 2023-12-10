@@ -76,9 +76,21 @@ From the [docs][4]:
 
 How to [activate the agents][5].
 
+## SQL 
+
+### Alerts
+
+Check the [Alerts for SQL Database and Azure Synapse Analytics][6] to identify threats for SQL.
+
+For example, **SQL Injection** may have the following:
+
+- Vulnerability: Faulty SQL statement or no sanitation.
+- Potential: An active exploit has occurred against an identified application vulnerable to SQL injection.
+
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection
 [3]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management
 [4]: https://learn.microsoft.com/en-us/training/modules/configure-integrate-analytics-agent-defender-cloud/2-set-security-event-option-workspace-level
 [5]: https://microsoftlearning.github.io/Secure-Azure-services-and-workloads-with-Microsoft-Defender-for-Cloud-regulatory-compliance-controls/Instructions/Labs/LAB_04_Configure%20and%20integrate%20a%20Log%20Analytics%20agent%20and%20workspace%20in%20Defender%20for%20Cloud.html
+[6]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-sql-db-and-warehouse
