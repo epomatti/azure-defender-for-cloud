@@ -87,6 +87,17 @@ For example, **SQL Injection** may have the following:
 - Vulnerability: Faulty SQL statement or no sanitation.
 - Potential: An active exploit has occurred against an identified application vulnerable to SQL injection.
 
+## Workflow automation
+
+Use Workflow automation to react when state changes in Defender.
+
+Trigger conditions:
+
+- Security alert
+- Recommendation
+- Regulatory compliance standards
+
+A Logic App will be created so that it can be selected via the Portal.
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection

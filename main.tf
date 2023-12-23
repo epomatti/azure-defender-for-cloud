@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.82.0"
+      version = "3.85.0"
     }
   }
 }
@@ -72,4 +72,11 @@ module "mssql" {
   public_network_access_enabled = var.mssql_public_network_access_enabled
   admin_admin                   = var.mssql_admin_login
   admin_login_password          = var.mssql_admin_login_password
+}
+
+module "logic_app" {
+  source   = "./modules/logicapp"
+  workload = local.workload
+  group    = azurerm_resource_group.default.name
+  location = azurerm_resource_group.default.location
 }
