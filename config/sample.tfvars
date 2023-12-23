@@ -19,3 +19,6 @@ mssql_max_size_gb                   = 2
 mssql_public_network_access_enabled = true
 mssql_admin_login                   = "sqladmin"
 mssql_admin_login_password          = "P4ssw0rd!2023"
+
+# App Service
+appservice_sku_name = "B1"

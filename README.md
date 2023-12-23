@@ -99,6 +99,11 @@ Trigger conditions:
 
 A Logic App will be created so that it can be selected via the Portal.
 
+## External Attack Surface Management (Defender EASM)
+
+To create an EASM workspace, use the Portal.
+
+
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection
 [3]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management

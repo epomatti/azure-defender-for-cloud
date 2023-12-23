@@ -54,3 +54,8 @@ variable "mssql_admin_login" {
 variable "mssql_admin_login_password" {
   type = string
 }
+
+## App Service
+variable "appservice_sku_name" {
+  type = string
+}

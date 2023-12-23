@@ -80,3 +80,11 @@ module "logic_app" {
   group    = azurerm_resource_group.default.name
   location = azurerm_resource_group.default.location
 }
+
+module "webapp" {
+  source              = "./modules/webapp"
+  workload            = local.workload
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
+  sku_name            = var.appservice_sku_name
+}
