@@ -49,7 +49,7 @@ Check the differences between the [plans][7].
 
 Deallocated/ing or starting servers are [not billed][8].
 
-When you enable Defender for Servers you're charged for **_all_** machines based on the power state. You're also charged for on AWS.
+When you enable Defender for Servers you're charged for **_all_** connect machines based on the power state. You're also charged for on AWS.
 
 ## Interactive guides
 
