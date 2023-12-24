@@ -43,6 +43,14 @@ Defender will use Microsoft Defender for Endpoint (MDE) for EDR, as well as [age
 
 The AMA is [not required][1] for Defender but it is installed anyways in this VM.
 
+### Billing
+
+Check the differences between the [plans][7].
+
+Deallocated/ing or starting servers are [not billed][8].
+
+When you enable Defender for Servers you're charged for **_all_** machines based on the power state. You're also charged for on AWS.
+
 ## Interactive guides
 
 Outlining Defender capabilities:
@@ -110,3 +118,5 @@ To create an EASM workspace, use the Portal.
 [4]: https://learn.microsoft.com/en-us/training/modules/configure-integrate-analytics-agent-defender-cloud/2-set-security-event-option-workspace-level
 [5]: https://microsoftlearning.github.io/Secure-Azure-services-and-workloads-with-Microsoft-Defender-for-Cloud-regulatory-compliance-controls/Instructions/Labs/LAB_04_Configure%20and%20integrate%20a%20Log%20Analytics%20agent%20and%20workspace%20in%20Defender%20for%20Cloud.html
 [6]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference#alerts-sql-db-and-warehouse
+[7]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers-select-plan
+[8]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/faq-defender-for-servers#what-servers-do-i-pay-for-in-a-subscription-
