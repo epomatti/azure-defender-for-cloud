@@ -113,7 +113,7 @@ To create an EASM workspace, use the Portal.
 
 ## Anti-malware
 
-Enable the anti-malware for the `vm-antimalware` compute, which is called `Microsoft Antimalware` (with type `Microsoft.Azure.Security.IaaSAntimalware`).
+Enable the anti-malware extension for the **vm-antimalware** resource, which is called `Microsoft Antimalware` in the gallery (with type `Microsoft.Azure.Security.IaaSAntimalware`).
 
 Example running a Fulls Scan scheduled every Sunday 2AM.
 
