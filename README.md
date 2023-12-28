@@ -111,6 +111,14 @@ A Logic App will be created so that it can be selected via the Portal.
 
 To create an EASM workspace, use the Portal.
 
+## Anti-malware
+
+Enable the anti-malware for the `vm-antimalware` compute, which is called `Microsoft Antimalware` (with type `Microsoft.Azure.Security.IaaSAntimalware`).
+
+Example running a Fulls Scan scheduled every Sunday 2AM.
+
+<img src=".assets/azure-antimalware.png" />
+
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection
