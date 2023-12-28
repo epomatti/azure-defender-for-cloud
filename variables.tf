@@ -12,6 +12,10 @@ variable "create_vm_windows" {
   type = bool
 }
 
+variable "create_antimalware_vm_windows" {
+  type = bool
+}
+
 variable "create_mssql" {
   type = bool
 }

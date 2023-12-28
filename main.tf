@@ -52,6 +52,16 @@ module "vm_windows" {
   size                = var.vm_windows_size
 }
 
+module "vm_antimalware" {
+  count               = var.create_antimalware_vm_windows == true ? 1 : 0
+  source              = "./modules/antimalware"
+  workload            = local.workload
+  resource_group_name = azurerm_resource_group.default.name
+  location            = azurerm_resource_group.default.location
+  subnet_id           = module.vnet.subnet_id
+  size                = var.vm_windows_size
+}
+
 module "keyvault" {
   source   = "./modules/keyvault"
   workload = local.workload

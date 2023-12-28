@@ -1,9 +1,11 @@
 public_ip_address_to_allow = ""
 
 # Services
-create_vm_linux   = true
-create_vm_windows = true
+create_vm_linux   = false
+create_vm_windows = false
 create_mssql      = false
+
+create_antimalware_vm_windows = true
 
 
 # Virtual Machine: Linux
