@@ -117,7 +117,7 @@ Enable the anti-malware for the `vm-antimalware` compute, which is called `Micro
 
 Example running a Fulls Scan scheduled every Sunday 2AM.
 
-<img src=".assets/azure-antimalware.png" />
+<img src=".assets/azure-antimalware.png" width=700 />
 
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
