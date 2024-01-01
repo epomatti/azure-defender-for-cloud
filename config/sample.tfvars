@@ -1,3 +1,4 @@
+location                   = "eastus2"
 public_ip_address_to_allow = ""
 
 # Services
@@ -7,10 +8,9 @@ create_mssql      = false
 
 create_antimalware_vm_windows = true
 
-
 # Virtual Machine: Linux
-vm_linux_size      = "Standard_B2ats_v2"
-vm_linux_image_sku = "22_04-lts"
+vm_linux_size      = "Standard_B2ps_v2"
+vm_linux_image_sku = "22_04-lts-arm64"
 
 # Virtual Machine: Windows
 vm_windows_size = "Standard_B2als_v2"

@@ -1,6 +1,5 @@
 variable "location" {
-  type    = string
-  default = "eastus2"
+  type = string
 }
 
 # Create toggles
