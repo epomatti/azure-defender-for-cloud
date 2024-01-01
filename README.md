@@ -119,6 +119,10 @@ Example running a Fulls Scan scheduled every Sunday 2AM.
 
 <img src=".assets/azure-antimalware.png" width=700 />
 
+## VM Vulnerability Scan (Qualys)
+
+TODO: Need to implement this
+
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection
