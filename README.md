@@ -123,6 +123,48 @@ Example running a Fulls Scan scheduled every Sunday 2AM.
 
 TODO: Need to implement this
 
+## AWS
+
+To integrate with AWS:
+
+```sh
+cd aws
+
+cp config/template.tfvars .auto.tfvars
+
+terraform init
+terraform apply -auto-approve
+```
+
+Create the resource group for the AWS integration:
+
+```sh
+az group create -l eastus2 -n rg-aws
+```
+
+Connect to Defender for Cloud and create an Amazon Web Services environment.
+
+Current plans supported:
+
+#### Cloud Security Posture Management (CSPM)
+
+- Foundational CSPM
+- Defender CSPM
+  - Agentless scanning (EC2 installed software and vulnerabilities)
+  - Sensitive data discovery
+  - And more
+
+#### Cloud Workload Protection
+
+- Servers (Plan 2)
+- Databases
+- Containers (EKS, ECR)
+
+
+<img src=".assets/defender-aws.png" />
+
+<img src=".assets/defender-aws-cwp-servers-plan2.png" />
+
 
 [1]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/auto-deploy-azure-monitoring-agent
 [2]: https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-agentless-data-collection
