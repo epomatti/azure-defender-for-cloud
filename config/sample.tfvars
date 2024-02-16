@@ -4,9 +4,8 @@ public_ip_address_to_allow = ""
 # Services
 create_vm_linux   = false
 create_vm_windows = false
-create_mssql      = false
 
-create_antimalware_vm_windows = true
+create_antimalware_vm_windows = false
 
 # Virtual Machine: Linux
 vm_linux_size      = "Standard_B2ps_v2"
@@ -16,6 +15,7 @@ vm_linux_image_sku = "22_04-lts-arm64"
 vm_windows_size = "Standard_B2als_v2"
 
 # Azure SQL Server
+create_mssql_server                 = false
 mssql_sku                           = "Basic"
 mssql_max_size_gb                   = 2
 mssql_public_network_access_enabled = true

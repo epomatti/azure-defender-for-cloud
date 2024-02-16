@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.85.0"
+      version = "3.92.0"
     }
   }
 }
@@ -70,7 +70,7 @@ module "keyvault" {
 }
 
 module "mssql" {
-  count    = var.create_mssql == true ? 1 : 0
+  count    = var.create_mssql_server == true ? 1 : 0
   source   = "./modules/mssql"
   workload = local.workload
   group    = azurerm_resource_group.default.name

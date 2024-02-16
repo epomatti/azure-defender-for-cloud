@@ -15,10 +15,6 @@ variable "create_antimalware_vm_windows" {
   type = bool
 }
 
-variable "create_mssql" {
-  type = bool
-}
-
 # Virutal Machine - Linux
 variable "vm_linux_size" {
   type = string
@@ -34,6 +30,10 @@ variable "vm_windows_size" {
 }
 
 # Azure SQL Server
+variable "create_mssql_server" {
+  type = bool
+}
+
 variable "public_ip_address_to_allow" {
   type = string
 }
